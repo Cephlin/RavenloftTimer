@@ -32,6 +32,7 @@ namespace RavenloftTimer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownHour = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDay = new System.Windows.Forms.NumericUpDown();
@@ -49,28 +50,31 @@ namespace RavenloftTimer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 26);
+            this.label1.Location = new System.Drawing.Point(62, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time and date";
             // 
             // numericUpDownHour
             // 
-            this.numericUpDownHour.Location = new System.Drawing.Point(148, 187);
+            this.numericUpDownHour.Location = new System.Drawing.Point(222, 288);
+            this.numericUpDownHour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownHour.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.numericUpDownHour.Name = "numericUpDownHour";
-            this.numericUpDownHour.Size = new System.Drawing.Size(46, 20);
+            this.numericUpDownHour.Size = new System.Drawing.Size(69, 26);
             this.numericUpDownHour.TabIndex = 3;
             this.numericUpDownHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NumericUpDownHour_KeyDown);
             // 
             // numericUpDownDay
             // 
-            this.numericUpDownDay.Location = new System.Drawing.Point(96, 187);
+            this.numericUpDownDay.Location = new System.Drawing.Point(144, 288);
+            this.numericUpDownDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownDay.Maximum = new decimal(new int[] {
             28,
             0,
@@ -82,7 +86,7 @@ namespace RavenloftTimer
             0,
             0});
             this.numericUpDownDay.Name = "numericUpDownDay";
-            this.numericUpDownDay.Size = new System.Drawing.Size(46, 20);
+            this.numericUpDownDay.Size = new System.Drawing.Size(69, 26);
             this.numericUpDownDay.TabIndex = 2;
             this.numericUpDownDay.Value = new decimal(new int[] {
             1,
@@ -100,33 +104,37 @@ namespace RavenloftTimer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(145, 171);
+            this.label2.Location = new System.Drawing.Point(218, 263);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Hour";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 171);
+            this.label3.Location = new System.Drawing.Point(140, 263);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Day";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 171);
+            this.label4.Location = new System.Drawing.Point(62, 263);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Month";
             // 
             // numericUpDownMonth
             // 
-            this.numericUpDownMonth.Location = new System.Drawing.Point(44, 187);
+            this.numericUpDownMonth.Location = new System.Drawing.Point(66, 288);
+            this.numericUpDownMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownMonth.Maximum = new decimal(new int[] {
             12,
             0,
@@ -138,7 +146,7 @@ namespace RavenloftTimer
             0,
             0});
             this.numericUpDownMonth.Name = "numericUpDownMonth";
-            this.numericUpDownMonth.Size = new System.Drawing.Size(46, 20);
+            this.numericUpDownMonth.Size = new System.Drawing.Size(69, 26);
             this.numericUpDownMonth.TabIndex = 1;
             this.numericUpDownMonth.Value = new decimal(new int[] {
             1,
@@ -149,9 +157,10 @@ namespace RavenloftTimer
             // 
             // TimerUpdateButton
             // 
-            this.TimerUpdateButton.Location = new System.Drawing.Point(200, 187);
+            this.TimerUpdateButton.Location = new System.Drawing.Point(300, 288);
+            this.TimerUpdateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TimerUpdateButton.Name = "TimerUpdateButton";
-            this.TimerUpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.TimerUpdateButton.Size = new System.Drawing.Size(112, 35);
             this.TimerUpdateButton.TabIndex = 4;
             this.TimerUpdateButton.Text = "Update";
             this.TimerUpdateButton.UseVisualStyleBackColor = true;
@@ -159,9 +168,9 @@ namespace RavenloftTimer
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 247);
+            this.ClientSize = new System.Drawing.Size(658, 380);
             this.Controls.Add(this.TimerUpdateButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDownMonth);
@@ -170,7 +179,9 @@ namespace RavenloftTimer
             this.Controls.Add(this.numericUpDownDay);
             this.Controls.Add(this.numericUpDownHour);
             this.Controls.Add(this.label1);
-            this.Name = "Ravenloft Timer";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "Form1";
             this.Text = "Ravenloft Timer by Cephlin";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDay)).EndInit();

@@ -50,6 +50,9 @@ namespace RavenloftTimer
             numericUpDownDay.Leave += NumericUpDownDay_Leave;
             numericUpDownMonth.Enter += NumericUpDownMonth_Enter;
             numericUpDownMonth.Leave += NumericUpDownMonth_Leave;
+
+            // Handle the FormClosing event
+            FormClosing += Form1_FormClosing;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -96,9 +99,33 @@ namespace RavenloftTimer
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Prevent form from closing, just hide it instead
-            e.Cancel = true;
-            this.Hide();
+            DialogResult dg = MessageBox.Show("Do you want the timer to stay open in the systray?", "Minimised", MessageBoxButtons.YesNoCancel);
+
+            if (dg == DialogResult.Yes)
+            {
+                // Prevent form from closing, just hide it instead
+                if (e.CloseReason == CloseReason.UserClosing)
+                {
+                    // Minimize the form instead of closing it
+                    e.Cancel = true;
+                    WindowState = FormWindowState.Minimized;
+                    Hide();
+                }
+            }
+            else if (dg == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // Show the form when double-clicking the system tray icon
+            if (e.Button == MouseButtons.Left)
+            {
+                Show();
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         private string Get_Text()
@@ -213,5 +240,6 @@ namespace RavenloftTimer
         {
             trayIcon.Icon = moon_icon;
         }
+
     }
 }
