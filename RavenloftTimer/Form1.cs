@@ -9,6 +9,7 @@ namespace RavenloftTimer
     public partial class Form1 : Form
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         // To retrieve a setting
         private static readonly RTAppSettings timer_settings = new RTAppSettings();
 
@@ -26,6 +27,7 @@ namespace RavenloftTimer
 
         public Form1()
         {
+            log.Error("An error occurred: ");
             try
             {
                 InitializeComponent();
